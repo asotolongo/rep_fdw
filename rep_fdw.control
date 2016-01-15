@@ -1,0 +1,6 @@
+#extesion
+comment = 'Extension to replicate tables to other PostgreSQL server using FDW'
+default_version = '0.1.0'
+relocatable = true
+superuser = false
+requires= 'postgres_fdw'

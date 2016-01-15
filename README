@@ -1,0 +1,44 @@
+--crear el la extension
+CREATE EXTENSION postgres_fdw
+
+
+--crear el FDW
+
+select rep_fdw.create_server(
+    'foraneo',
+    'localhost' ,
+    '5433' ,
+    'prueba3' )
+
+
+ -- crear el user map
+
+ select rep_fdw.create_usermap(
+    'postgres',
+    'postgresql',
+    'foraneo')   
+--crear las tablas foraneas
+select rep_fdw.create_f_table(
+    'public',
+    'categories',
+    'foraneo' )
+
+
+ -- crear el trigger para para tabla
+ SELECT rep_fdw.generar_trigger(
+    'public.categories'
+);
+
+
+--hago las pruebas de insert, update, delete
+INSERT INTO public.categories(
+            category, categoryname)
+    VALUES (101, 'cien1');
+
+UPDATE public.categories
+   SET  categoryname=upper(categoryname)
+ WHERE category=101;
+
+
+
+

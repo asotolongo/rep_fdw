@@ -1,0 +1,58 @@
+{
+   "name": "rep_fdw",
+   "abstract": "Extension to replicate tables to other PostgreSQL server using FDW",
+   "description": "Extension to replicate tables to other PostgreSQL server using FDW",
+   "version": "0.1.0",
+   "maintainer": [
+      "<asotolongo@gmail.com>"
+   ],
+   "license": {
+      "PostgreSQL": "http://www.postgresql.org/about/licence"
+   },
+   "prereqs": {
+      "runtime": {
+         "requires": {
+            "PostgreSQL": "9.3.0"
+         },
+         "recommends": {
+            "PostgreSQL": "9.3.0"
+         }
+      }
+   },
+   "provides": {
+     "pgsmtp": {
+       "file": "rep_fdw--0.1.0.sql",
+       "docfile": "README",
+       "version": "0.1.0",
+       "abstract": "Extension to replicate tables to other PostgreSQL server using FDW"
+     },
+     "schematap": {
+       "file": "pgsmtp--0.1.0.sql",
+       "docfile": "README",
+       "version": "0.1.0",
+       "abstract": "Extension to replicate tables to other PostgreSQL server using FDW"
+     }
+   },
+   "resources": {
+      "homepage": "http://anthonysotolongo.wordpress.com",
+      "bugtracker": {
+         "mailto": "asotolongo@gmail.com"
+      },
+      "repository": {
+         "url":  "https://github.com/asotolongo/rep_fdw.git",
+         "web":  "https://github.com/asotolongo ",
+        "type": "git"
+      }
+   },
+   "generated_by": "Anthony R. Sotolongo Leon",
+   "meta-spec": {
+      "version": "1.0.0",
+      "url": "http://pgxn.org/meta/spec.txt"
+   },
+   "tags": [
+      "replica",
+      "fdw"
+   ]
+}
+
+
